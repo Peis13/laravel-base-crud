@@ -1,19 +1,27 @@
-<h1>lista movie</h1>
+@extends('layout.app')
 
-<ul>
-    @foreach ($movies as $movie)
-        <li>
-            <a href="{{ route('movies.show', $movie->id) }}">{{ $movie->titolo }}</a>
-            -
-            <a href="{{ route('movies.edit', $movie->id) }}">modifica</a>
+@section('page_title')
+    Laravel base CRUD
+@endsection
 
-            <form action="{{ route('movies.destroy', $movie->id) }}" method="post">
-                @csrf
-                @method('DELETE')
-                <input type="submit" value="elimina">
-            </form>
-        </li>
-    @endforeach
-</ul>
+@section('main_content')
+    <div class="section">
+        <h1>lista movie</h1>
 
-<a href="{{ route('movies.create') }}">inserisci nuovo movie</a>
+        <ul>
+            @foreach ($movies as $movie)
+                <li class="movie">
+                    <a href="{{ route('movies.show', $movie->id) }}">{{ $movie->titolo }}</a>
+                    -
+                    <a href="{{ route('movies.edit', $movie->id) }}">modifica</a>
+
+                    <form action="{{ route('movies.destroy', $movie->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="elimina">
+                    </form>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+@endsection

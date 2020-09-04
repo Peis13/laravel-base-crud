@@ -27,7 +27,7 @@ class UpdateMoviesTable extends Migration
     public function down()
     {
         Schema::table('movies', function (Blueprint $table) {
-            //
+            $table->dropColumn(['voto', 'descrizione']);
         });
     }
 }

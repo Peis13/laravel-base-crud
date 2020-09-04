@@ -43,21 +43,13 @@ class MovieController extends Controller
 
         $new_movie = new Movie();
         $new_movie->fill($data_request);
-        // $new_movie->titolo = $data_request['titolo'];
-        // $new_movie->genere = $data_request['genere'];
-        // $new_movie->durata = $data_request['durata'];
-        // $new_movie->anno = $data_request['anno'];
-        // $new_movie->voto = $data_request['voto'];
-        // $new_movie->descrizione = $data_request['descrizione'];
 
         // salvo il nuovo movie nel DB
-        $saved = $new_movie->save();
+        $is_movie_saved = $new_movie->save();
 
         // se il salvataggio è avvenuto con successo, prendo l'ultimo movie inserito nel DB e lo passo alla route
-        if ($saved) {
-            $saved_movie = Movie::orderBy('id', 'desc')->first();
-
-            return redirect()->route('movies.show', $saved_movie->id);
+        if ($is_movie_saved) {
+            return redirect()->route('movies.show', $new_movie);
         }
     }
 
@@ -97,9 +89,11 @@ class MovieController extends Controller
         $data_request = $request->all();
 
         // update del record
-        $movie->update($data_request);
+        $is_movie_updated = $movie->update($data_request);
 
-        return redirect()->route('movies.show', compact('movie'));
+        if ($is_movie_updated) {
+            return redirect()->route('movies.show', $movie);
+        }
     }
 
     /**

@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: 3px solid purple;
+}
+
+header .navbar .logo {
+  color: purple;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .navbar nav .link-route {
+  display: flex;
+}
+
+header .navbar nav .link-route li {
+  margin-left: 20px;
+}
+
+header .navbar nav .link-route li:last-child {
+  margin-right: 20px;
+}
+
+main .container .section ul .movie {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid lightgray;
+}
+

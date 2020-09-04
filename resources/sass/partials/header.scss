@@ -1,0 +1,29 @@
+header {
+    .navbar {
+        @include flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        border-bottom: 3px solid purple;
+
+        .logo {
+            color: $colore_logo;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav {
+            .link-route {
+                @include flex;
+
+                li {
+                    margin-left: 20px;
+
+                    &:last-child {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
