@@ -12,12 +12,12 @@
             <li><b>descrizione</b>: {{ $movie->descrizione }}</li>
         </ul>
 
-        <a href="{{ route('movies.edit', $movie->id) }}">modifica movie</a>
+        <a class="btn strandard" href="{{ route('movies.edit', $movie) }}">modifica</a>
 
-        <form action="{{ route('movies.destroy', $movie->id) }}" method="post">
+        <form action="{{ route('movies.destroy', $movie) }}" method="post">
             @csrf
             @method('DELETE')
-            <input type="submit" value="elimina">
+            <input class="btn delete" type="submit" value="elimina">
         </form>
     </div>
 @endsection

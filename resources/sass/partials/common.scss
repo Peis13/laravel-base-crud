@@ -6,13 +6,8 @@
 }
 
 // STILI GENERALI
-.container {
-    width: 80%;
-    margin: auto;
-}
-
-.section {
-    padding: 50px 0;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -29,4 +24,32 @@ ul {
 
 a {
     color: inherit;
+}
+
+form {
+    display: inline-block;
+}
+
+input.delete {
+    // border: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.btn {
+    @include btn;
+
+    &.standard {
+        @include btn_standard;
+    }
+    &.delete {
+        @include btn_delete;
+    }
 }

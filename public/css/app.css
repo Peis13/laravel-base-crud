@@ -4,13 +4,8 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-}
-
-.section {
-  padding: 50px 0;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -29,6 +24,50 @@ a {
   color: inherit;
 }
 
+form {
+  display: inline-block;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 12px;
+  margin: 0 10px;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid purple;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+.btn.standard {
+  color: #fff;
+  background-color: purple;
+}
+
+.btn.delete {
+  color: purple;
+  background-color: #fff;
+}
+
+.btn.delete:hover {
+  color: #fff;
+  background-color: purple;
+}
+
 header .navbar {
   display: flex;
   justify-content: space-between;
@@ -42,6 +81,7 @@ header .navbar .logo {
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 10px;
 }
 
 header .navbar nav .link-route {

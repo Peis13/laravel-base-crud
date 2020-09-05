@@ -3,3 +3,34 @@
   display: -webkit-flex;
   display: flex;
 }
+
+@mixin btn {
+    cursor: pointer;
+    padding: 5px 12px;
+    margin: 0 10px;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid $colore_primario;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+@mixin btn_standard {
+    color: $colore_secondario;
+    background-color: $colore_primario;
+}
+
+@mixin btn_delete {
+    color: $colore_primario;
+    background-color: $colore_secondario;
+
+    &:hover {
+        color: $colore_secondario;
+        background-color: $colore_primario;
+    }
+}

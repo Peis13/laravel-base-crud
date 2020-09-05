@@ -12,13 +12,12 @@
             @foreach ($movies as $movie)
                 <li class="movie">
                     <a href="{{ route('movies.show', $movie->id) }}">{{ $movie->titolo }}</a>
-                    -
-                    <a href="{{ route('movies.edit', $movie->id) }}">modifica</a>
+                    <a class="btn standard" href="{{ route('movies.edit', $movie->id) }}">modifica</a>
 
                     <form action="{{ route('movies.destroy', $movie->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="elimina">
+                        <input class="btn delete" type="submit" value="elimina">
                     </form>
                 </li>
             @endforeach

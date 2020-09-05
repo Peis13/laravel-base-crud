@@ -7,10 +7,11 @@ header {
         border-bottom: 3px solid purple;
 
         .logo {
-            color: $colore_logo;
+            color: $colore_primario;
             font-size: 40px;
             font-weight: bold;
             text-transform: uppercase;
+            letter-spacing: 10px;
         }
         nav {
             .link-route {

@@ -51,7 +51,7 @@
                     <textarea name="descrizione" rows="8" cols="80">{{ $movie->descrizione }}</textarea>
                 </div>
                 <div>
-                    <input type="submit" value="salva">
+                    <input class="btn standard" type="submit" value="salva">
                 </div>
             </form>
         </div>
